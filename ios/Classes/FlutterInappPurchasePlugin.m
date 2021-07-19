@@ -540,7 +540,7 @@
                 break;
             case SKPaymentTransactionStateRestored:
                 NSLog(@"Restored ");
-                [[SKPaymentQueue defaultQueue] finishTransaction:transaction];
+                // [[SKPaymentQueue defaultQueue] finishTransaction:transaction];
                 break;
             case SKPaymentTransactionStateDeferred:
                 NSLog(@"Deferred (awaiting approval via parental controls, etc.)");
@@ -618,7 +618,7 @@
            || transaction.transactionState == SKPaymentTransactionStatePurchased) {
             [self getPurchaseData:transaction withBlock:^(NSDictionary *restored) {
                 [items addObject:restored];
-                [[SKPaymentQueue defaultQueue] finishTransaction:transaction];
+                // [[SKPaymentQueue defaultQueue] finishTransaction:transaction];
             }];
         }
     }
